@@ -40,7 +40,7 @@ export default Ember.Component.extend({
       this.$().data('DateTimePicker').minDate(this.get('minDate'));
     });
     this.addObserver('disabledDates', function() {
-      this.$().data('DateTimePicker').minDate(this.get('disabledDates'));
+      this.$().data('DateTimePicker').disabledDates(this.get('disabledDates'));
     });
   }),
 
