@@ -39,6 +39,9 @@ export default Ember.Component.extend({
     this.addObserver('minDate', function() {
       this.$().data('DateTimePicker').minDate(this.get('minDate'));
     });
+    this.addObserver('disabledDates', function() {
+      this.$().data('DateTimePicker').minDate(this.get('disabledDates'));
+    });
   }),
 
   destroyDatepicker: Ember.on('willDestroyElement', function() {
